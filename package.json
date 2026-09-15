@@ -1,0 +1,24 @@
+{
+  "name": "Geographic Data Collection Lesson",
+  "description": "درس تفاعلي حول جمع البيانات الجغرافية | أ. بدر الوهيبي",
+  "version": "1.0.0",
+  "author": "بدر الوهيبي",
+  "license": "MIT",
+  "homepage": "https://bader-alw.github.io/geographic-data-collection-lesson/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bader-alw/geographic-data-collection-lesson.git"
+  },
+  "keywords": [
+    "geography",
+    "جغرافيا",
+    "data-collection",
+    "جمع-البيانات",
+    "education",
+    "تعليم",
+    "interactive-lesson",
+    "درس-تفاعلي",
+    "oman",
+    "عمان"
+  ]
+}
