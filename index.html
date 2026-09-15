@@ -3,296 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جمع البيانات الجغرافية | أ. بدر الوهيبي</title>
+    <title>جمع البيانات الجغرافية - أ. بدر الوهيبي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <h1>جمع البيانات الجغرافية</h1>
-            <p class="instructor">أ. بدر الوهيبي</p>
-        </div>
-    </header>
-
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#intro" class="nav-link active">المقدمة</a></li>
-            <li><a href="#ground-survey" class="nav-link">المسح الأرضي</a></li>
-            <li><a href="#aerial-survey" class="nav-link">المسح الجوي والفضائي</a></li>
-            <li><a href="#ai" class="nav-link">الذكاء الاصطناعي</a></li>
-            <li><a href="#activities" class="nav-link">الأنشطة</a></li>
-            <li><a href="#quiz" class="nav-link">الاختبار</a></li>
-        </ul>
+        <div class="container-nav">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <span>جمع البيانات الجغرافية</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#lessons" class="nav-link">الدروس</a></li>
+                <li><a href="#activities" class="nav-link">الأنشطة</a></li>
+                <li><a href="#resources" class="nav-link">الموارد</a></li>
+                <li><a href="#contact" class="nav-link">التواصل</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Introduction Section -->
-        <section id="intro" class="section">
-            <h2>مقدمة عن جمع البيانات الجغرافية</h2>
-            <div class="content-box">
-                <p>
-                    تُجمّع البيانات الجغرافية باستخدام عدة مصادر ومنها المسوحات الميدانية التي تتم بطرق مختلفة:
-                </p>
-                <div class="methods-grid">
-                    <div class="method-card">
-                        <h3>🌍 المسح الأرضي</h3>
-                        <p>باستخدام الأدوات التقليدية والحديثة</p>
-                    </div>
-                    <div class="method-card">
-                        <h3>✈️ المسح الجوي</h3>
-                        <p>باستخدام الطائرات والبالونات</p>
-                    </div>
-                    <div class="method-card">
-                        <h3>🛰️ المسح الفضائي</h3>
-                        <p>باستخدام الأقمار الاصطناعية</p>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>جمع البيانات الجغرافية</h1>
+            <p>درس تفاعلي شامل في الجغرافيا الحديثة</p>
+            <div class="hero-info">
+                <span><i class="fas fa-chalkboard-user"></i> أ. بدر الوهيبي</span>
+                <span><i class="fas fa-globe"></i> Geography Teacher</span>
+            </div>
+            <button class="cta-btn" onclick="document.getElementById('lessons').scrollIntoView({behavior: 'smooth'})">
+                ابدأ التعلم <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="hero-image">
+            <div class="floating-globe">
+                <i class="fas fa-globe"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessons" class="lessons">
+        <div class="section-header">
+            <h2>📚 الدروس الرئيسية</h2>
+            <p>اختر الدرس الذي تريد دراسته</p>
+        </div>
+        
+        <div class="lessons-grid">
+            <!-- Lesson 1 -->
+            <div class="lesson-card" onclick="scrollToSection('lesson1')">
+                <div class="lesson-icon">
+                    <i class="fas fa-map"></i>
+                </div>
+                <h3>المسح الأرضي</h3>
+                <p>تعرف على الطرق التقليدية والحديثة لجمع البيانات الجغرافية من سطح الأرض</p>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                    <span><i class="fas fa-star"></i> ⭐⭐⭐⭐</span>
                 </div>
             </div>
-        </section>
 
-        <!-- Ground Survey Section -->
-        <section id="ground-survey" class="section">
-            <h2>أولاً: المسح الأرضي</h2>
-            <div class="content-box">
-                <p>
-                    يعتبر من أقدم طرق جمع البيانات المتعلقة بظواهر سطح الأرض عن طريق قياس المسافات والارتفاعات والزوايا.
-                </p>
-                
-                <h3>الأدوات التقليدية:</h3>
-                <div class="tools-container">
-                    <div class="tool-item">
-                        <img src="https://via.placeholder.com/150?text=القياس" alt="شريط القياس">
-                        <h4>شريط القياس</h4>
-                        <p>لقياس المسافات الأفقية</p>
-                    </div>
-                    <div class="tool-item">
-                        <img src="https://via.placeholder.com/150?text=البوصلة" alt="البوصلة المشورية">
-                        <h4>البوصلة المشورية</h4>
-                        <p>لتحديد الاتجاهات</p>
-                    </div>
-                    <div class="tool-item">
-                        <img src="https://via.placeholder.com/150?text=الميزان" alt="الميزان">
-                        <h4>الميزان</h4>
-                        <p>لقياس الارتفاعات</p>
-                    </div>
+            <!-- Lesson 2 -->
+            <div class="lesson-card" onclick="scrollToSection('lesson2')">
+                <div class="lesson-icon">
+                    <i class="fas fa-satellite"></i>
                 </div>
-
-                <h3>الأدوات الحديثة:</h3>
-                <div class="modern-tools">
-                    <div class="tool-card modern">
-                        <h4>📡 محطة العمل المتكاملة</h4>
-                        <p>جهاز حديث يجمع بين عدة وظائف لقياس المسافات والزوايا والارتفاعات بدقة عالية</p>
-                    </div>
+                <h3>المسح الجوي والفضائي</h3>
+                <p>استكشف تقنيات الأقمار الاصطناعية والطائرات بدون طيار في جمع البيانات</p>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                    <span><i class="fas fa-star"></i> ⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
-        </section>
 
-        <!-- Aerial & Satellite Survey Section -->
-        <section id="aerial-survey" class="section">
-            <h2>ثانياً: المسح الجوي والفضائي</h2>
-            <div class="content-box">
-                <p>
-                    تُجمّع بيانات الظواهر الجغرافية الطبيعية والبشرية اعتماداً على الصور الجوية أو الصور الفضائية عبر تقنية الاستشعار عن بعد.
-                </p>
-
-                <h3>وسائل المسح الجوي والفضائي:</h3>
-                <div class="survey-methods">
-                    <div class="survey-item">
-                        <h4>🛰️ الأقمار الاصطناعية</h4>
-                        <p>توفر صوراً دقيقة وشاملة لسطح الأرض</p>
-                        <ul>
-                            <li>تغطي مساحات واسعة</li>
-                            <li>توفر صور دورية</li>
-                            <li>عالية الدقة</li>
-                        </ul>
-                    </div>
-                    <div class="survey-item">
-                        <h4>🎈 البالون الملون</h4>
-                        <p>وسيلة قديمة لكن مفيدة في المسح</p>
-                        <ul>
-                            <li>منخفضة التكلفة</li>
-                            <li>مفيدة للمسافات القريبة</li>
-                        </ul>
-                    </div>
-                    <div class="survey-item">
-                        <h4>🚁 الطائرات بدون طيار (الدرونز)</h4>
-                        <p>تقنية حديثة وفعالة جداً</p>
-                        <ul>
-                            <li>سهولة الإطلاق والعودة</li>
-                            <li>قليلة التكلفة</li>
-                            <li>عالية الدقة</li>
-                            <li>توفر بيانات سريعة</li>
-                        </ul>
-                    </div>
+            <!-- Lesson 3 -->
+            <div class="lesson-card" onclick="scrollToSection('lesson3')">
+                <div class="lesson-icon">
+                    <i class="fas fa-brain"></i>
                 </div>
-
-                <div class="info-box">
-                    <h4>📌 معلومة عمانية</h4>
-                    <p>
-                        أطلقت سلطنة عمان أول قمر اصطناعي ذكي باسم (OL-1) مسجل رسميّاً باسم سلطنة عمان لدى الاتحاد الدولي للاتصالات.
-                    </p>
+                <h3>الذكاء الاصطناعي</h3>
+                <p>تعلم كيف يساهم الذكاء الاصطناعي في تطوير عمليات جمع البيانات</p>
+                <div class="lesson-meta">
+                    <span><i class="fas fa-clock"></i> 18 دقيقة</span>
+                    <span><i class="fas fa-star"></i> ⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- AI Section -->
-        <section id="ai" class="section">
-            <h2>الذكاء الاصطناعي في جمع البيانات الجغرافية</h2>
-            <div class="content-box">
-                <p>
-                    يعتبر الذكاء الاصطناعي من التقنيات الحديثة التي ساعدت على تطوير عمليات جمع البيانات.
-                </p>
+    <!-- Lesson Content Sections -->
+    <section id="lesson1" class="lesson-content">
+        <div class="content-wrapper">
+            <div class="lesson-header">
+                <h2><i class="fas fa-map"></i> المسح الأرضي</h2>
+                <p class="lesson-intro">أقدم وأساسي طرق جمع البيانات الجغرافية</p>
+            </div>
 
-                <h3>أهمية الذكاء الاصطناعي:</h3>
-                <div class="ai-benefits">
-                    <div class="benefit-card">
-                        <h4>🤖 جمع كميات كبيرة من البيانات</h4>
-                        <p>من مصادر مختلفة بكفاءة عالية</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>🖼️ تحسين جودة الصور</h4>
-                        <p>الجوية والفضائية بدقة أعلى</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h4>📍 سرعة تحديد الظواهر</h4>
-                        <p>الطبيعية والبشرية بدقة عالية</p>
-                    </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🔍 ما هو المسح الأرضي؟</h3>
+                    <p>عملية جمع البيانات المتعلقة بظواهر سطح الأرض من خلال قياس المسافات والارتفاعات والزوايا باستخدام أدوات متخصصة.</p>
                 </div>
 
-                <div class="ai-cycle">
-                    <h4>دورة الذكاء الاصطناعي:</h4>
-                    <div class="cycle-diagram">
-                        <div class="cycle-step step-1">سُنة الإطلاق</div>
-                        <div class="cycle-arrow">→</div>
-                        <div class="cycle-step step-2">المميزات</div>
-                        <div class="cycle-arrow">→</div>
-                        <div class="cycle-step step-3">الاستخدامات</div>
-                    </div>
+                <div class="content-box">
+                    <h3>🛠️ الأدوات التقليدية</h3>
+                    <ul class="tools-list">
+                        <li><strong>شريط القياس:</strong> لقياس المسافات الأفقية</li>
+                        <li><strong>البوصلة المشورية:</strong> لتحديد الاتجاهات</li>
+                        <li><strong>الميزان:</strong> لقياس الارتفاعات</li>
+                        <li><strong>عصا القياس:</strong> لقياس الارتفاع</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h3>📡 الأدوات الحديثة</h3>
+                    <ul class="tools-list">
+                        <li><strong>محطة العمل المتكاملة:</strong> تجمع عدة وظائف في جهاز واحد</li>
+                        <li><strong>نظام GPS:</strong> تحديد المواقع بدقة عالية</li>
+                        <li><strong>أجهزة الليزر:</strong> قياس المسافات بدقة عالية جداً</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <!-- Activities Section -->
-        <section id="activities" class="section">
-            <h2>الأنشطة التفاعلية</h2>
-            
-            <!-- Compare Activity -->
-            <div class="activity">
-                <h3>🔄 قارِن بين المسح الأرضي والمسح الجوي</h3>
+            <div class="interactive-activity">
+                <h3>🎯 نشاط تفاعلي: قارن بين الطرق</h3>
                 <div class="comparison-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>أوجه المقارنة</th>
-                                <th>المسح الأرضي</th>
-                                <th>المسح الجوي</th>
+                                <th>المعيار</th>
+                                <th>الطرق التقليدية</th>
+                                <th>الطرق الحديثة</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>طريقة جمع البيانات</td>
-                                <td><input type="text" placeholder="أكمل الجواب"></td>
-                                <td><input type="text" placeholder="أكمل الجواب"></td>
+                                <td>الدقة</td>
+                                <td><input type="text" placeholder="أكمل"></td>
+                                <td><input type="text" placeholder="أكمل"></td>
                             </tr>
                             <tr>
-                                <td>الأدوات المستخدمة</td>
-                                <td><input type="text" placeholder="أكمل الجواب"></td>
-                                <td><input type="text" placeholder="أكمل الجواب"></td>
+                                <td>السرعة</td>
+                                <td><input type="text" placeholder="أكمل"></td>
+                                <td><input type="text" placeholder="أكمل"></td>
+                            </tr>
+                            <tr>
+                                <td>التكلفة</td>
+                                <td><input type="text" placeholder="أكمل"></td>
+                                <td><input type="text" placeholder="أكمل"></td>
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-check" onclick="checkComparison()">تحقق من الإجابة</button>
+                </div>
+                <button class="submit-btn" onclick="submitActivity('lesson1')">تقديم الإجابة</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="lesson2" class="lesson-content">
+        <div class="content-wrapper">
+            <div class="lesson-header">
+                <h2><i class="fas fa-satellite"></i> المسح الجوي والفضائي</h2>
+                <p class="lesson-intro">استخدام الصور والأقمار الاصطناعية في جمع البيانات</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>📡 الأقمار الاصطناعية</h3>
+                    <p>توفر صوراً دقيقة وشاملة لسطح الأرض من الفضاء، وتغطي مساحات واسعة جداً.</p>
+                    <ul class="tools-list">
+                        <li>تغطية شاملة للمناطق الشاسعة</li>
+                        <li>توفر صور دورية منتظمة</li>
+                        <li>دقة عالية جداً</li>
+                        <li>توفر بيانات متنوعة</li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h3>🚁 الطائرات بدون طيار (الدرونز)</h3>
+                    <p>تقنية حديثة وفعالة جداً لجمع البيانات بسرعة وكفاءة.</p>
+                    <ul class="tools-list">
+                        <li>سهلة الإطلاق والعودة</li>
+                        <li>قليلة التكلفة نسبياً</li>
+                        <li>عالية الدقة</li>
+                        <li>توفر بيانات سريعة وحديثة</li>
+                    </ul>
+                </div>
+
+                <div class="content-box info-box">
+                    <h3>🇴🇲 معلومة عمانية مهمة</h3>
+                    <p><strong>القمر الصناعي OL-1:</strong></p>
+                    <p>أطلقت سلطنة عمان أول قمر اصطناعي ذكي باسم (OL-1)، وهو مسجل رسميّاً باسم سلطنة عمان لدى الاتحاد الدولي للاتصالات.</p>
+                    <p><em>السنة: 2024 | الاستخدام: جمع البيانات والمراقبة</em></p>
                 </div>
             </div>
 
-            <!-- Application Activity -->
-            <div class="activity">
-                <h3>📱 طبّق: مشروع جمع بيانات</h3>
-                <div class="application-box">
-                    <p><strong>التعليمات:</strong></p>
-                    <ol>
-                        <li>استخدم أحد أجهزة المسح الأرضي المتوفرة في مختبر التقنيات الجغرافية الحديثة بمحافظتك</li>
-                        <li>قم بجمع بيانات لأحد المواقع القريبة من مدرستك</li>
-                        <li>سجّل ملاحظاتك</li>
-                        <li>اعرض البيانات بطريقة مناسبة أمام زملائك في الصف</li>
-                    </ol>
-                    <textarea class="project-textarea" placeholder="اكتب ملاحظاتك وخطواتك هنا..."></textarea>
-                </div>
-            </div>
-
-            <!-- Research Activity -->
-            <div class="activity">
-                <h3>🔍 ابحث: عن القمر الصناعي OL-1</h3>
-                <div class="research-box">
-                    <p>ابحث في مصادر التعلم المختلفة عن القمر الصناعي (OL-1)، ثم صمم بطاقة تعريفية تتضمن العناصر الآتية:</p>
-                    <div class="research-elements">
-                        <div class="element">
-                            <strong>سُنة الإطلاق</strong>
-                            <input type="text" placeholder="أدخل السنة">
-                        </div>
-                        <div class="element">
-                            <strong>المميزات</strong>
-                            <textarea placeholder="أكتب المميزات"></textarea>
-                        </div>
-                        <div class="element">
-                            <strong>الاستخدامات</strong>
-                            <textarea placeholder="أكتب الاستخدامات"></textarea>
-                        </div>
+            <div class="interactive-activity">
+                <h3>🎯 نشاط تفاعلي: ابحث وأكمل</h3>
+                <div class="research-form">
+                    <div class="form-group">
+                        <label>اسم القمر الصناعي العماني:</label>
+                        <input type="text" placeholder="اكتب الاسم" id="satellite-name">
                     </div>
-                    <button class="btn btn-save" onclick="saveResearch()">حفظ البطاقة</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quiz Section -->
-        <section id="quiz" class="section">
-            <h2>📝 اختبر معلوماتك</h2>
-            <div class="quiz-container">
-                <div class="quiz-question">
-                    <h4>السؤال 1: ما هي أقدم طرق جمع البيانات الجغرافية؟</h4>
-                    <div class="quiz-options">
-                        <label><input type="radio" name="q1"> المسح الفضائي</label>
-                        <label><input type="radio" name="q1"> المسح الأرضي</label>
-                        <label><input type="radio" name="q1"> المسح الجوي</label>
+                    <div class="form-group">
+                        <label>سنة الإطلاق:</label>
+                        <input type="text" placeholder="اكتب السنة" id="satellite-year">
                     </div>
-                </div>
-
-                <div class="quiz-question">
-                    <h4>السؤال 2: ما هي استخدامات الطائرات بدون طيار في المسح الجغرافي؟</h4>
-                    <div class="quiz-options">
-                        <label><input type="checkbox"> جمع البيانات بسرعة</label>
-                        <label><input type="checkbox"> قليلة التكلفة</label>
-                        <label><input type="checkbox"> عالية الدقة</label>
-                        <label><input type="checkbox"> جميع ما سبق</label>
+                    <div class="form-group">
+                        <label>الاستخدامات الرئيسية:</label>
+                        <textarea placeholder="اكتب الاستخدامات" id="satellite-uses"></textarea>
                     </div>
                 </div>
+                <button class="submit-btn" onclick="submitActivity('lesson2')">حفظ البحث</button>
+            </div>
+        </div>
+    </section>
 
-                <div class="quiz-question">
-                    <h4>السؤال 3: اكتب اسم القمر الصناعي العماني</h4>
-                    <input type="text" class="quiz-input" placeholder="اكتب الإجابة">
+    <section id="lesson3" class="lesson-content">
+        <div class="content-wrapper">
+            <div class="lesson-header">
+                <h2><i class="fas fa-brain"></i> الذكاء الاصطناعي في جمع البيانات</h2>
+                <p class="lesson-intro">تطبيقات الذكاء الاصطناعي في الجغرافيا الحديثة</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>🤖 ما دور الذكاء الاصطناعي؟</h3>
+                    <p>الذكاء الاصطناعي يحسّن من كفاءة وسرعة جمع ومعالجة البيانات الجغرافية بشكل كبير.</p>
                 </div>
 
-                <button class="btn btn-submit" onclick="submitQuiz()">تقديم الاختبار</button>
-                <div id="quiz-result" class="quiz-result"></div>
-            </div>
-        </section>
+                <div class="content-box benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>جمع كميات كبيرة</h4>
+                    <p>معالجة ملايين البيانات من مصادر متعددة</p>
+                </div>
 
-        <!-- About Teacher -->
-        <section class="about-teacher">
-            <h3>👨‍🏫 حول المعلم</h3>
-            <div class="teacher-info">
-                <h4>أ. بدر الوهيبي</h4>
-                <p>معلم الجغرافيا | خبير في المسح الجغرافي والتقنيات الحديثة</p>
+                <div class="content-box benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>تحسين الصور</h4>
+                    <p>تحسين جودة الصور الجوية والفضائية</p>
+                </div>
+
+                <div class="content-box benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>تحديد سريع</h4>
+                    <p>التعرف على الظواهر بسرعة وبدقة عالية</p>
+                </div>
+
+                <div class="content-box benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>التنبؤ</h4>
+                    <p>التنبؤ بالتطورات المستقبلية للظواهر</p>
+                </div>
             </div>
-        </section>
-    </main>
+
+            <div class="interactive-activity">
+                <h3>🎯 اختبر معلوماتك</h3>
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h4>السؤال 1: أي من التالي يعتبر أداة حديثة للمسح الأرضي؟</h4>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1"> البوصلة المشورية</label>
+                            <label><input type="radio" name="q1"> محطة العمل المتكاملة</label>
+                            <label><input type="radio" name="q1"> شريط القياس</label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>السؤال 2: ما هو اسم القمر الصناعي العماني؟</h4>
+                        <input type="text" class="quiz-input" placeholder="اكتب الإجابة" id="q2">
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>السؤال 3: اختر فوائد الذكاء الاصطناعي (اختر أكثر من واحدة)</h4>
+                        <div class="quiz-options">
+                            <label><input type="checkbox"> جمع كميات كبيرة من البيانات</label>
+                            <label><input type="checkbox"> تحسين جودة الصور</label>
+                            <label><input type="checkbox"> سرعة التحليل</label>
+                            <label><input type="checkbox"> جميع ما سبق</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="submit-btn" onclick="submitQuiz()">تقديم الاختبار</button>
+                <div id="quiz-result" class="result-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="section-header">
+            <h2>🎨 الأنشطة التفاعلية</h2>
+            <p>تطبيق عملي لما تعلمته</p>
+        </div>
+
+        <div class="activities-grid">
+            <div class="activity-card">
+                <div class="activity-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>المشروع الميداني</h3>
+                <p>قم بجمع بيانات جغرافية من موقع قريب من مدرستك باستخدام الأدوات المتاحة</p>
+                <a href="#" class="activity-link">ابدأ المشروع <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>دراسة الحالة</h3>
+                <p>اختبر نفسك من خلال دراسة حالات واقعية لجمع البيانات الجغرافية</p>
+                <a href="#" class="activity-link">اختبر الآن <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>تحليل البيانات</h3>
+                <p>تعلم كيفية تحليل ومعالجة البيانات الجغرافية بشكل صحيح</p>
+                <a href="#" class="activity-link">ابدأ التحليل <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="section-header">
+            <h2>📚 الموارد والمراجع</h2>
+            <p>مصادر تعليمية موثوقة</p>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3><i class="fas fa-book"></i> الكتب الموصى بها</h3>
+                <ul>
+                    <li>جمع البيانات الجغرافية - د. أحمد محمد</li>
+                    <li>الاستشعار عن بعد - د. فاطمة عمر</li>
+                    <li>تقنيات المسح الحديثة - د. علي محمود</li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3><i class="fas fa-link"></i> مواقع مفيدة</h3>
+                <ul>
+                    <li><a href="#">Google Earth Pro</a></li>
+                    <li><a href="#">USGS Earth Explorer</a></li>
+                    <li><a href="#">Sentinel Hub</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3><i class="fas fa-video"></i> مقاطع فيديو</h3>
+                <ul>
+                    <li>تقنيات المسح الأرضي</li>
+                    <li>الأقمار الاصطناعية وتطبيقاتها</li>
+                    <li>الذكاء الاصطناعي والجغرافيا</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>📞 التواصل</h2>
+            <p>تواصل معي للاستفسارات والاقتراحات</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <h4>المعلم</h4>
+                        <p>أ. بدر الوهيبي</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>البريد الإلكتروني</h4>
+                        <p><a href="mailto:teacher@example.com">teacher@example.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>الهاتف</h4>
+                        <p><a href="tel:+96899999999">+968 9999 9999</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="اسمك" required>
+                <input type="email" placeholder="بريدك الإلكتروني" required>
+                <textarea placeholder="رسالتك" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 جمع البيانات الجغرافية | أ. بدر الوهيبي | جميع الحقوق محفوظة</p>
+        <div class="footer-content">
+            <p>&copy; 2024 جمع البيانات الجغرافية | أ. بدر الوهيبي | جميع الحقوق محفوظة</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
